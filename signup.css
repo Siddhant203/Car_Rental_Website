@@ -1,0 +1,118 @@
+body{
+    background-color: #1e1b25;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.outerbody{
+    height: 95%;
+    width: 95%;
+    background-color: #292434;
+    border-radius: 15px;
+    margin: 3%;
+    box-shadow: 10px 10px 20px 10px rgba(0,0,0,0.8);
+}
+#back{
+    height: 20px;
+    width: 105px;
+    padding: 5px;
+    position: absolute;
+    top: 100px;
+    left: 630px;
+    background-color: rgba(0, 0, 0, 0.419);
+    border-radius: 15px;
+}
+.image{
+    height: 100%;
+    width: 50%;
+}
+.view{
+    height:515px;
+    width: 700px;
+    margin: 5%;
+    border-radius: 15px;
+    box-shadow: 3px 10px 10px 10px rgba(0,0,0,0.8);
+}
+
+.details{
+    float: left;
+    position: absolute;
+    top:40px;
+    left: 920px;
+}
+
+h1{
+    font-size: 45px;
+    text-shadow: 10px 10px 10px rgba(0,0,0,0.8);
+}
+form{
+    float: left;
+}
+.uname{
+    height: 35px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.uname:hover{
+    background-color: lightgrey;
+}
+
+.dob{
+    height: 35px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.dob:hover{
+    background-color: lightgrey;
+}
+
+#email {
+    height: 35px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#email:hover{
+    background-color: lightgrey;
+}
+.upass {
+    height: 35px;
+    width: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.upass:hover{
+    background-color: lightgrey;
+}
+.check{
+    position: relative;
+    margin-top: 10px;
+}
+.check:nth-last-child(){
+    position: absolute;
+}
+
+button{
+    height: 35px;
+    width: 300px;
+    background-color: #2b1a51c7; 
+    border-radius: 10px;
+    margin-left: 5px;
+    color: lightblue;
+}
+button:hover{
+    background-color:#3f2775c7 ;
+    color: lightgray;
+}
+button:active{
+    background-color:#190f2ec7 ;
+    color: darkgray;
+    transform: scale(0.9);
+}
+a{
+    color: lightblue;
+    text-decoration: none;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="outerbody">
+
+        <div class="image">
+            <a id="back" href="index.php"><i class="fa-solid fa-house"></i>back to home </a>
+            <img src="logo.png" alt="brand_logo">
+        </div>
+        <div class="details">
+            
+            <form action="php\shared\login.php" method="post" onsubmit="return authenticate()">
+                
+                <h1>Login your account</h1> 
+                <span>New user?<a href="signup.html">sign up</a></span><br><br>
+                <h4>Username</h4>
+                <input id="uname" required type="text" name="uname" placeholder="Username /User Id"><br>
+                <h4>Password</h4>
+                <input id="upass" required minlength="5" type="password" name="password" placeholder=""><br><br>
+                <br>
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+        
+    <!-- <script>
+        unameObj=document.getElementById("uname")
+        upassObj=document.getElementById("upass")
+
+        function authenticate(){
+            if(unameObj.value=="car123" && upassObj.value=="rental"){
+                location.href="index.php";
+                return false
+            }
+            else{
+                alert("invalid credentials")
+                return false
+            }
+        }
+    </script> -->
+
+</body>
+</html>

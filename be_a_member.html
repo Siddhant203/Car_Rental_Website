@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be a member</title>
+    <link rel="stylesheet" href="be_a_member.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="outerbody">
+        <a id="back" href="index.php"><i class="fa-solid fa-house"></i>back to home </a>
+        <div class="details">
+            
+            <form action="php/vender/member.php" method="post" onsubmit="return authenticate()">
+                
+                <h1>Enter your information</h1> 
+                <input class="uname" required type="text" name="uname1" placeholder="First name">
+                <input class="uname" required type="text" name="uname2" placeholder="Last name"><br>
+                <input class="ibox" id="dob" required type="date" name="dob" placeholder="D-O-B"><br>
+                <select class="ibox" name="usertype" required>
+                    <option >Vender</option>
+                </select><br>
+                <input class="radio" name="gender"  type="radio">Male
+                <input class="radio" name="gender"  type="radio">Female <br>
+                <input class="ibox" required type="text" name="father_name" placeholder="Father's name"><br>
+                <input class="ibox" id="email" required type="email" name="email" placeholder="Email"><br>
+                <input class="ibox" required minlength="10" type="number" name="phone_no" placeholder="Phone no."><br>
+                <input class="ibox" required minlength="12" type="number" name="aadhar_no" placeholder="Aadhar no."><br>
+                <input class="ibox" required type="text" name="driving_lic" placeholder="Driving license"><br>
+                <input class="ibox" required type="text" name="address" placeholder="Permanent address"><br>
+                <input class="ibox" required type="text" placeholder="Pressent address"><br>
+                <input class="ibox" id="upass1"required minlength="5" type="password" name="password" placeholder="Password"><br>
+                <input class="ibox" id="upass2"required minlength="5" type="password" placeholder="Confirm Password"><br>
+                <input class="check" type="checkbox">I agree to the <a href="">Terms & Condition</a><br><br><br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+        
+    <script>
+        upassObj1=document.getElementById("upass1")
+        upassObj2=document.getElementById("upass2")
+
+        function authenticate(){
+            if(upassObj1.value==upassObj2.value){
+                return true
+            }
+            else{
+                alert("invalid credentials")
+                return false
+            }
+        }
+    </script>
+
+</body>
+</html>

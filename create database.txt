@@ -1,0 +1,50 @@
+ 
+CREATE DATABASE car_rental;
+USE car_rental;
+
+
+
+CREATE TABLE `user`(
+  s_no INT AUTO_INCREMENT PRIMARY KEY,
+  user_name VARCHAR(100) NOT NULL,
+  u_id VARCHAR(50) NOT NULL,
+  user_type VARCHAR(50),
+  dob DATE,
+  gender ENUM('Male','Female','Others'),
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(100) NOT NULL,
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE `vender`(
+  s_no INT AUTO_INCREMENT PRIMARY KEY,
+  user_name VARCHAR(50) NOT NULL,
+  u_id VARCHAR(50) NOT NULL,
+  usertype VARCHAR(10),
+  dob DATE,
+  gender ENUM('Male','Female','Others'),
+  father_name VARCHAR(50),
+  email VARCHAR(50) UNIQUE NOT NULL,
+  phone_no INT,
+  aadhar_no INT,
+  driving_lic VARCHAR(50),
+  address VARCHAR(50),
+  password VARCHAR(100),
+  time TIMESTAMP DEFAULT CURRENT_TIMESTAMP            
+);
+
+
+
+CREATE TABLE cars (
+    car_no INT AUTO_INCREMENT PRIMARY KEY,
+    car_name VARCHAR(100),
+    car_nameplate VARCHAR(100),
+    car_type ENUM('Luxury', 'Premium', 'Normal'),
+    car_img VARCHAR(255),
+    price INT,
+    price_per_day INT,
+    car_availability ENUM('Yes', 'No'),
+    c_id INT DEFAULT NULL
+);
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="outerbody">
+
+        <div class="image">
+            <a id="back" href="index.php"><i class="fa-solid fa-house"></i>back to home </a>
+            <img class="view" src="sand-dune.jpg" alt="image">
+        </div>
+        <div class="details">
+            
+            <form action="php\shared\signup.php"  method="post" onsubmit="return authenticate()">
+                
+                <h1>Create an account</h1> 
+                <span>Already have account?<a href="login.html">login</a></span><br><br>
+                <input class="uname" name="name" required type="text" placeholder="Enter your name"><br>
+                <input class="dob" name="birthdate" required type="date" placeholder="D-O-B"><br>
+                <select class="uname" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select><br>
+                <select class="uname" name="usertype" required>
+                    <option >Customer</option>
+                </select><br>
+                <input id="email" name="email" required type="email" placeholder="Email"><br>
+                <input id="upass1" class="upass" name="password" required minlength="5" type="password" placeholder="Password"><br>
+                <input id="upass2" class="upass" name="conpassword" required minlength="5" type="password" placeholder="Confirm Password"><br>
+                <input class="check" name="check" type="checkbox">I agree to the <a href="">Terms & Condition</a><br><br><br>
+                <button>Create your account</button>
+            </form>
+        </div>
+    </div>
+        
+    <script>
+        upassObj1=document.getElementsById("upass1")
+        upassObj2=document.getElementsById("upass2")
+
+        function authenticate(){
+            if(upassObj1.value== upassObj2.value){
+                
+                return true;
+            }
+            else{
+                alert("Password Missmatch")
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
